@@ -18,10 +18,10 @@
 }
 
 .topRow {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-bottom: 1.25rem;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 1;
 }
 
 .close {
@@ -34,6 +34,11 @@
   justify-content: center;
   cursor: pointer;
   text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.close:hover {
+  opacity: 0.7;
 }
 
 .langBtn {
