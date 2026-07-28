@@ -1,0 +1,161 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background: #F2F2F2;
+  height: 3.25rem;
+  overflow: visible;
+  scrollbar-width: none;
+  position: relative;
+}
+
+.nav::-webkit-scrollbar {
+  display: none;
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.813rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #2B303A;
+  background: transparent;
+  border: 0.125rem solid transparent;
+  border-radius: 1.25rem;
+  padding: 0.375rem 1rem;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  line-height: 1;
+}
+
+.navLink:hover {
+  color: #FF0055;
+  border-color: #FF0055;
+}
+
+.active {
+  color: #FF0055;
+  border-color: #FF0055;
+}
+
+.open {
+  color: #FF0055;
+  border-color: #FF0055;
+}
+
+.arrow {
+  width: 0.563rem;
+  height: 0.563rem;
+  flex-shrink: 0;
+  color: #2B303A;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.navLink:hover .arrow {
+  color: #FF0055;
+}
+
+.active .arrow,
+.open .arrow {
+  color: #FF0055;
+}
+
+.arrowUp {
+  transform: rotate(180deg);
+}
+
+.dropdownWrap {
+  position: relative;
+}
+
+.dropdownFull {
+  position: static;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+  padding: 0.75rem;
+  min-width: 12rem;
+}
+
+.dropdown::before {
+  content: '';
+  position: absolute;
+  top: -0.75rem;
+  left: 0;
+  right: 0;
+  height: 0.75rem;
+}
+
+.dropdownFullMenu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 98%;
+  z-index: 100;
+  background: #fff;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+  margin-top: 0;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.dropdownFullMenu > * {
+  width: 100%;
+  max-width: 97.375rem;
+}
+
+:global(body.dark) .nav {
+  background: #24242a;
+}
+
+:global(body.dark) .navLink {
+  color: #e6e6e6;
+}
+
+:global(body.dark) .navLink:hover {
+  color: #FF0055;
+  border-color: #FF0055;
+}
+
+:global(body.dark) .active,
+:global(body.dark) .open {
+  color: #FF0055;
+  border-color: #FF0055;
+}
+
+:global(body.dark) .arrow {
+  color: #e6e6e6;
+}
+
+:global(body.dark) .navLink:hover .arrow {
+  color: #FF0055;
+}
+
+:global(body.dark) .active .arrow,
+:global(body.dark) .open .arrow {
+  color: #FF0055;
+}
+
+:global(body.dark) .dropdown {
+  background: #24242a;
+}
+
+:global(body.dark) .dropdownFullMenu {
+  background: #24242a;
+}

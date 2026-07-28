@@ -1,0 +1,26 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.item {
+  padding: 0.5rem 1rem;
+  font-size: 0.813rem;
+  font-weight: 500;
+  color: #2B303A;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.item:hover {
+  color: #FF0055;
+}
+
+:global(body.dark) .item {
+  color: #e6e6e6;
+}
+
+:global(body.dark) .item:hover {
+  color: #FF0055;
+}

@@ -1,0 +1,216 @@
+.sidebar {
+  background-color: #fafafa;
+  box-shadow: 0 0.375rem 2.5rem rgba(24, 24, 24, 0.16);
+  width: 16.25rem;
+  min-height: 100%;
+  padding: 1.563rem 1.125rem;
+  overflow-y: auto;
+  border-radius: 0 0 1.25rem 0;
+}
+
+.sidebarInner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.logoMobile {
+  display: none;
+  margin-bottom: 0;
+  width: 11.25rem;
+  height: 3rem;
+}
+
+.mobileActions {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobileActionBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem 0.75rem;
+  background: #fff;
+  border: 1px solid #E5E7EB;
+  border-radius: 0.5rem;
+  font-size: 0.813rem;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.15s;
+  width: 100%;
+  font-family: inherit;
+}
+
+.mobileActionBtn:hover {
+  border-color: #FF0055;
+  color: #FF0055;
+}
+
+.mobileActionBtn ion-icon {
+  font-size: 1.125rem;
+  flex-shrink: 0;
+}
+
+.mobileLangRow {
+  display: flex;
+  gap: 0.375rem;
+}
+
+.mobileLangBtn {
+  flex: 1;
+  padding: 0.5rem;
+  background: #fff;
+  border: 1px solid #E5E7EB;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #374151;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+
+.mobileLangBtnActive {
+  background: #FF0055;
+  border-color: #FF0055;
+  color: #fff;
+}
+
+.box {
+  margin-bottom: 0;
+}
+
+.title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.875rem;
+  color: #3c3c46;
+  line-height: 1.4;
+}
+
+.tagsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0 -0.313rem -0.625rem;
+  gap: 0;
+}
+
+.item {
+  margin: 0 0.313rem 0.625rem;
+}
+
+.listHd .item {
+  margin: 0 0.313rem 0 0;
+}
+
+.second {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 0;
+}
+
+.second .item {
+  margin: 0 0 0.375rem;
+  width: 100%;
+}
+
+.trending {
+  width: 100%;
+  max-width: 100%;
+  justify-content: space-between;
+  background: transparent !important;
+  border: none !important;
+  padding: 0.375rem 0 !important;
+  border-radius: 0 !important;
+  text-transform: none;
+  font-size: 0.75rem;
+}
+
+.trending :global(span) {
+  white-space: normal;
+  max-width: none;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.35;
+}
+
+.searchResults .title {
+  font-size: 0.875rem;
+}
+
+@media (max-width: 64rem) {
+  .sidebar {
+    padding: 0.938rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 16.25rem;
+    border-radius: 0;
+    z-index: 99;
+    padding-top: 1.25rem;
+    box-shadow: 0 0.375rem 2.5rem rgba(24, 24, 24, 0.16);
+  }
+
+  .logoMobile {
+    display: inline-block;
+  }
+
+  .mobileActions {
+    display: flex;
+  }
+}
+
+@media (max-width: 39.938rem) {
+  .box {
+    margin-bottom: 0;
+  }
+}
+
+:global(body.dark) .sidebar {
+  background-color: #18181C;
+  box-shadow: 0 0.375rem 2.5rem rgba(0, 0, 0, 0.4);
+}
+
+:global(body.dark) .title {
+  color: #e6e6e6;
+}
+
+:global(body.dark) .mobileActionBtn {
+  background: #24242a;
+  border-color: #3a3a45;
+  color: #d1d1d1;
+}
+
+:global(body.dark) .mobileActionBtn:hover {
+  border-color: #FF0055;
+  color: #FF0055;
+}
+
+:global(body.dark) .mobileLangBtn {
+  background: #24242a;
+  border-color: #3a3a45;
+  color: #d1d1d1;
+}
+
+:global(body.dark) .mobileLangBtnActive {
+  background: #FF0055;
+  border-color: #FF0055;
+  color: #fff;
+}
+
+

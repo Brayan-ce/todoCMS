@@ -1,0 +1,94 @@
+.card {
+  min-width: 0;
+}
+
+.thumbLink {
+  display: block;
+  text-decoration: none;
+}
+
+.thumb {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.375rem;
+  overflow: hidden;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.15);
+  background: #eee;
+}
+
+.hdBadge {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 0.625rem;
+  font-weight: 700;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.625rem;
+  z-index: 2;
+}
+
+.duration {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font-size: 0.688rem;
+  font-weight: 600;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  z-index: 2;
+}
+
+.title {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #374151;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card:hover .title {
+  color: #FF0055;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.25rem;
+  font-size: 0.688rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.metaLeft {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.rating {
+  color: #10B981;
+  font-weight: 700;
+  margin-left: 0.5rem;
+}
+
+.date {
+  color: #6B7280;
+}
+
+:global(body.dark) .title {
+  color: #e6e6e6;
+}
+
+:global(body.dark) .card:hover .title {
+  color: #FF0055;
+}

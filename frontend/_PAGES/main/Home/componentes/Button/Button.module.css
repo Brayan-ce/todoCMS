@@ -1,0 +1,47 @@
+.btn {
+  font-size: 0.75rem;
+  padding: 0.5rem 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.25rem;
+  background-color: #eee;
+  text-transform: capitalize;
+  border: 0.125rem solid transparent;
+  font-weight: 500;
+  transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+  color: #3c3c46;
+}
+
+.btn:hover {
+  background-color: #fa0052;
+  color: #fff;
+}
+
+.primary {
+  background-color: #fa0052;
+  color: #fff;
+}
+
+.primary:hover {
+  background-color: #d80047;
+}
+
+.ghost {
+  background-color: transparent;
+}
+
+:global(body.dark) .btn {
+  background-color: #24242a;
+  color: #e6e6e6;
+}
+
+:global(body.dark) .btn:hover {
+  background-color: #fa0052;
+  color: #fff;
+}
+
+:global(body.dark) .primary {
+  background-color: #fa0052;
+  color: #fff;
+}

@@ -1,0 +1,67 @@
+.tag {
+  font-size: 0.75rem;
+  padding: 0.5rem 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 1.25rem;
+  background-color: #eee;
+  text-transform: capitalize;
+  border: 0.125rem solid transparent;
+  font-weight: 500;
+  transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+  color: #3c3c46;
+  max-width: 100%;
+}
+
+.tag:hover {
+  border-color: #fa0052;
+  color: #fa0052;
+}
+
+.active {
+  background-color: #fa0052;
+  color: #fff;
+  border-color: #fa0052;
+}
+
+.active:hover {
+  color: #fff;
+  background-color: #fa0052;
+}
+
+.name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 11.25rem;
+}
+
+.withValue .name {
+  max-width: 8.75rem;
+}
+
+.value {
+  color: #a6a6b0;
+  font-size: 0.688rem;
+  flex-shrink: 0;
+}
+
+.tag:hover .value {
+  color: #fa0052;
+}
+
+:global(body.dark) .tag {
+  background-color: #24242a;
+  color: #e6e6e6;
+}
+
+:global(body.dark) .tag:hover {
+  border-color: #fa0052;
+  color: #fa0052;
+}
+
+:global(body.dark) .active {
+  background-color: #fa0052;
+  color: #fff;
+}

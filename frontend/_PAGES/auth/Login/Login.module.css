@@ -1,0 +1,278 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f2;
+  padding: 1rem;
+}
+
+.modal {
+  width: 25rem;
+  max-width: 90%;
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 2rem 1.75rem;
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.close {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #E5E7EB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.langBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+  text-transform: uppercase;
+}
+
+.langBtn:hover {
+  background: #f3f4f6;
+}
+
+.langIcon {
+  font-size: 18px;
+  color: #6B7280;
+}
+
+.closeIcon {
+  font-size: 1.25rem;
+  color: #4B5563;
+}
+
+.logoSection {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.logoWrap {
+  width: 12rem;
+  height: 3rem;
+}
+
+.greeting {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #4B5563;
+  text-align: center;
+  margin: 1rem 0 1.5rem;
+  line-height: 1.4;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.inputWrap {
+  display: flex;
+  align-items: center;
+  background: #F3F4F6;
+  border-radius: 0.625rem;
+  height: 2.75rem;
+  padding: 0 0.875rem;
+  gap: 0.5rem;
+}
+
+.inputIcon {
+  width: 1.125rem;
+  height: 1.125rem;
+  color: #9CA3AF;
+  flex-shrink: 0;
+}
+
+.input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 0.875rem;
+  color: #374151;
+  outline: none;
+  height: 100%;
+}
+
+.input::placeholder {
+  color: #9CA3AF;
+}
+
+.togglePw {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+
+.error {
+  background: #FEE2E2;
+  color: #DC2626;
+  font-size: 0.813rem;
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+:global(body.dark) .error {
+  background: #3B1010;
+  color: #FCA5A5;
+}
+
+.submitBtn {
+  width: 100%;
+  height: 2.875rem;
+  background: #FF0055;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.813rem;
+  border-radius: 1.438rem;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.submitBtn:hover {
+  opacity: 0.85;
+}
+
+.googleBtn {
+  width: 100%;
+  height: 2.75rem;
+  background: #fff;
+  border: 0.063rem solid #D1D5DB;
+  border-radius: 1.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.googleBtn:hover {
+  background: #f9fafb;
+}
+
+.googleIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.footer {
+  margin-top: 1.25rem;
+  text-align: center;
+}
+
+.footerText {
+  font-size: 0.75rem;
+  color: #6B7280;
+  margin-bottom: 0.5rem;
+}
+
+.footerLink {
+  color: #3B82F6;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+:global(body.dark) .page {
+  background: #1C1D22;
+}
+
+:global(body.dark) .modal {
+  background: #24242a;
+}
+
+:global(body.dark) .greeting {
+  color: #e6e6e6;
+}
+
+:global(body.dark) .label {
+  color: #a6a6b0;
+}
+
+:global(body.dark) .inputWrap {
+  background: #16171b;
+}
+
+:global(body.dark) .input {
+  color: #e6e6e6;
+}
+
+:global(body.dark) .googleBtn {
+  background: #1d1b28;
+  border-color: #3a3a45;
+  color: #e6e6e6;
+}
+
+:global(body.dark) .googleBtn:hover {
+  background: #2a2835;
+}
+
+:global(body.dark) .footerText {
+  color: #9CA3AF;
+}
+
+:global(body.dark) .close {
+  background: #3a3a45;
+}
+
+:global(body.dark) .closeIcon {
+  color: #e6e6e6;
+}
+
+:global(body.dark) .langBtn {
+  color: #e6e6e6;
+}
+
+:global(body.dark) .langBtn:hover {
+  background: #3a3a45;
+}
+
+:global(body.dark) .langIcon {
+  color: #9CA3AF;
+}

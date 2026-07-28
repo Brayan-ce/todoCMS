@@ -1,0 +1,162 @@
+.info {
+  padding: 1rem 0;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2B303A;
+  margin: 1rem 0 0.75rem;
+}
+
+.actionBar {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.actionBtn {
+  background: none;
+  border: none;
+  color: #8A99AD;
+  font-size: 0.813rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0;
+}
+
+.activePill {
+  background: #FF0055;
+  color: #fff;
+  border-radius: 0.75rem;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.813rem;
+  font-weight: 700;
+}
+
+.activeTab {
+  color: #FF0055;
+}
+
+.metadata {
+  display: flex;
+  gap: 1rem;
+  color: #8A99AD;
+  font-size: 0.875rem;
+  margin: 0.75rem 0;
+  border-bottom: 0.063rem solid #E2E8F0;
+  padding-bottom: 0.75rem;
+}
+
+.uploader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.uploaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: #ddd;
+  flex-shrink: 0;
+}
+
+.uploaderInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.uploaderName {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FF0055;
+}
+
+.subs {
+  font-size: 0.813rem;
+  color: #8A99AD;
+}
+
+.subscribeBtn {
+  background: #FF0055;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 1rem;
+  padding: 0.375rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.description {
+  color: #4B5563;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.tagsSection {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tagLabel {
+  font-size: 0.813rem;
+  color: #4B5563;
+  font-weight: 600;
+}
+
+.tag {
+  background: #EFEFEF;
+  border-radius: 0.75rem;
+  padding: 0.125rem 0.625rem;
+  font-size: 0.813rem;
+  color: #4B5563;
+}
+
+:global(body.dark) .title {
+  color: #e6e6e6;
+}
+
+:global(body.dark) .description {
+  color: #a6a6b0;
+}
+
+:global(body.dark) .tagLabel {
+  color: #a6a6b0;
+}
+
+:global(body.dark) .tag {
+  background: #24242a;
+  color: #e6e6e6;
+}
+
+@media (max-width: 48rem) {
+  .title {
+    font-size: 1.125rem;
+  }
+
+  .actionBar {
+    gap: 0.5rem;
+  }
+
+  .actionBtn {
+    font-size: 0.625rem;
+  }
+}

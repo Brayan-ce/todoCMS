@@ -1,0 +1,28 @@
+.headerPlaceholder {
+  height: 8.75rem;
+  width: 100%;
+}
+
+@media (max-width: 48rem) {
+  .headerPlaceholder {
+    height: 7.5rem;
+  }
+}
+
+@media (max-width: 36rem) {
+  .headerPlaceholder {
+    height: 6.875rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .headerPlaceholder {
+    height: 6.25rem;
+  }
+}
+
+@media (max-width: 22.5rem) {
+  .headerPlaceholder {
+    height: 5.625rem;
+  }
+}

@@ -1,0 +1,28 @@
+.page {
+  max-width: 97.375rem;
+  margin: 0 auto;
+  padding: 3rem 0.938rem;
+  min-height: 60vh;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #111827;
+  margin: 0 0 0.5rem;
+  text-transform: lowercase;
+}
+
+.sub {
+  font-size: 1rem;
+  color: #6B7280;
+  margin: 0;
+}
+
+:global(body.dark) .title {
+  color: #e6e6e6;
+}
+
+:global(body.dark) .sub {
+  color: #9CA3AF;
+}

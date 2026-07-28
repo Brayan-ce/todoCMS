@@ -1,0 +1,49 @@
+.wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 1.25rem;
+  background-color: #eee;
+  border: 0.125rem solid transparent;
+  color: #3c3c46;
+  text-transform: capitalize;
+  transition: color 0.3s, border-color 0.3s, background-color 0.3s, border-radius 0.3s;
+}
+
+.btn:hover {
+  border-color: #fa0052;
+  color: #fa0052;
+}
+
+.compact {
+  padding: 0.375rem 0.875rem;
+}
+
+.text {
+  line-height: 1.2;
+}
+
+.arrow {
+  width: 0.625rem;
+  height: 0.625rem;
+  flex-shrink: 0;
+}
+
+:global(body.dark) .btn {
+  background-color: #24242a;
+  color: #e6e6e6;
+}
+
+:global(body.dark) .btn:hover {
+  border-color: #fa0052;
+  color: #fa0052;
+}

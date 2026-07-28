@@ -1,0 +1,54 @@
+.card {
+  display: block;
+  text-decoration: none;
+}
+
+.thumb {
+  width: 90%;
+  margin: 0 auto;
+  aspect-ratio: 3 / 4;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  background: #000;
+}
+
+.name {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #2B303A;
+  margin-top: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.card:hover .name {
+  color: #FF0055;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.688rem;
+  color: #6B7280;
+  margin-top: 0.25rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rating {
+  color: #10B981;
+  font-weight: 700;
+}
+
+:global(body.dark) .name {
+  color: #e6e6e6;
+}
+
+:global(body.dark) .card:hover .name {
+  color: #FF0055;
+}
