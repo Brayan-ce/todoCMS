@@ -116,6 +116,7 @@ export default function Signup() {
       <div className={styles.page}>
         <div className={styles.modal}>
           <div className={styles.topRow}>
+          {/* language btn — hidden for future
           <button type="button" className={styles.langBtn} onClick={() => {
             const idx = IDIOMAS.findIndex(i => i.code === lang)
             const next = IDIOMAS[(idx + 1) % IDIOMAS.length]
@@ -124,6 +125,7 @@ export default function Signup() {
             <ion-icon name="globe-outline" className={styles.langIcon}></ion-icon>
             <span>{lang.toUpperCase()}</span>
           </button>
+          */}
           <Link href="/" className={styles.close} aria-label="Close">
           <ion-icon name="close-outline" className={styles.closeIcon}></ion-icon>
         </Link>
@@ -174,9 +176,11 @@ export default function Signup() {
   return (
     <div className={styles.page}>
       <div className={styles.modal}>
-        <Link href="/" className={styles.close} aria-label="Close">
-          <ion-icon name="close-outline" className={styles.closeIcon}></ion-icon>
-        </Link>
+        <div className={styles.topRow}>
+          <Link href="/" className={styles.close} aria-label="Close">
+            <ion-icon name="close-outline" className={styles.closeIcon}></ion-icon>
+          </Link>
+        </div>
 
         <div className={styles.logoSection}>
           <div className={styles.logoWrap}>
