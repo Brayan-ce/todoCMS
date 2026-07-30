@@ -67,6 +67,11 @@
 
 @media (max-width: 26.563rem) {
   .thumb {
-    width: 100%;
+    width: 50%;
+    padding: 0 0.313rem 0.938rem;
+  }
+
+  .label {
+    font-size: 0.75rem;
   }
 }

@@ -10,8 +10,8 @@ export default function AlbumsPage({ titleLead, titleRest, albums, images }) {
           <span>{titleLead}</span> {titleRest}
         </h1>
         <div className={styles.filters}>
-          <button type="button" className={styles.filterBtn}>{titleLead} &#8743;</button>
-          <button type="button" className={styles.filterBtn}>All Time &#8743;</button>
+          <button type="button" className={styles.filterBtn}>{titleLead} <ion-icon name="chevron-down-outline"></ion-icon></button>
+          <button type="button" className={styles.filterBtn}>All Time <ion-icon name="chevron-down-outline"></ion-icon></button>
         </div>
       </div>
 

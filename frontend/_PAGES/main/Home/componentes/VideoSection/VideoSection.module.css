@@ -28,7 +28,6 @@
   color: #2B303A;
   margin-right: auto;
   letter-spacing: 0.031rem;
-  padding-top: 2.5%;
 }
 
 .title span {
@@ -59,6 +58,23 @@
   margin: 0 -0.625rem;
 }
 
+.thumbs > * {
+  width: 20%;
+  padding: 0 0.625rem 1.563rem;
+}
+
+@media (max-width: 78.125rem) {
+  .thumbs > * {
+    width: 25%;
+  }
+}
+
+@media (max-width: 61.938rem) {
+  .thumbs > * {
+    width: 33.333%;
+  }
+}
+
 @media (max-width: 64rem) {
   .blockThumbs {
     margin-bottom: 0.625rem;
@@ -78,13 +94,9 @@
     margin: 0 -0.313rem;
   }
 
-  .headline {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .title {
-    padding-top: 1.5%;
+  .thumbs > * {
+    width: 50%;
+    padding: 0 0.313rem 0.938rem;
   }
 }
 

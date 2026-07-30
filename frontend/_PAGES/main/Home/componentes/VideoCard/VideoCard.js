@@ -11,14 +11,16 @@ function formatViews(views, lang) {
   return new Intl.NumberFormat(locale).format(views)
 }
 
-export default function VideoCard({ video, imageSrc }) {
+export default function VideoCard({ video, imageSrc, className }) {
   const { lang } = useIdioma()
   return (
-    <div className={styles.thumb}>
+    <div className={`${styles.thumb}${className ? ' ' + className : ''}`}>
       <div className={styles.box}>
         <Link className={styles.item} href={video.href} title={video.title}>
           <span className={styles.thumbImg}>
-            <Imagenes src={imageSrc} alt={video.title} />
+            <span className={styles.imgWrap}>
+              <Imagenes src={imageSrc} alt={video.title} />
+            </span>
             {video.hd && <span className={styles.isHd}>HD</span>}
             <span className={styles.duration}>{video.duration}</span>
             <span className={styles.playOverlay} aria-hidden="true">

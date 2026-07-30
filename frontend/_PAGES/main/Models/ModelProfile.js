@@ -78,7 +78,7 @@ export default function ModelProfile({ model, image, videos, images }) {
         <h2 className={styles.sectionTitle}>
           {model.name.toUpperCase()}&apos;s <span>Top</span> Rated Videos
         </h2>
-        <button type="button" className={styles.filterBtn}>Top Rated &#8743;</button>
+        <button type="button" className={styles.filterBtn}>Top Rated <ion-icon name="chevron-down-outline"></ion-icon></button>
       </div>
 
       <div className={styles.videoGrid}>
@@ -91,7 +91,7 @@ export default function ModelProfile({ model, image, videos, images }) {
         <h2 className={styles.sectionTitle}>
           {model.name.toUpperCase()}&apos;s <span>Top</span> Rated Albums
         </h2>
-        <button type="button" className={styles.filterBtn}>Top Rated &#8743;</button>
+        <button type="button" className={styles.filterBtn}>Top Rated <ion-icon name="chevron-down-outline"></ion-icon></button>
       </div>
 
       <p className={styles.emptyState}>There is no data in this list.</p>

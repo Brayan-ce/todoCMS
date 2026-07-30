@@ -16,7 +16,6 @@
   font-weight: 700;
   text-transform: uppercase;
   color: #2B303A;
-  padding-top: 2.5%;
 }
 
 .title span {
@@ -37,8 +36,14 @@
   padding: 0.5rem 2rem;
   font-size: 0.75rem;
   font-weight: 500;
-  color: #FF0055;
+  color: #2B303A;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.filterBtn ion-icon {
+  font-size: 0.625rem;
 }
 
 .grid {
@@ -55,7 +60,7 @@
 
 :global(body.dark) .filterBtn {
   background: #24242a;
-  color: #FF0055;
+  color: #e6e6e6;
 }
 
 @media (max-width: 64rem) {
@@ -69,15 +74,6 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-
-  .title {
-    padding-top: 1.5%;
-  }
 }
 
 @media (max-width: 39.938rem) {
@@ -88,6 +84,6 @@
 
 @media (max-width: 26.563rem) {
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }

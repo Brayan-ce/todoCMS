@@ -1,0 +1,93 @@
+.page {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1.25rem 0.938rem;
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 1rem;
+}
+
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.emptySaved {
+  text-align: center;
+  padding: 2.5rem 1rem;
+}
+
+.emptyIcon {
+  font-size: 3rem;
+  color: #D1D5DB;
+  margin-bottom: 0.75rem;
+}
+
+.emptyText {
+  font-size: 0.938rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 0.25rem;
+}
+
+.emptyDesc {
+  font-size: 0.75rem;
+  color: #6B7280;
+  margin: 0 0 1.25rem;
+}
+
+.exploreBtn {
+  display: inline-flex;
+  height: 2.5rem;
+  padding: 0 1.5rem;
+  background: #FF0055;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.75rem;
+  border-radius: 1.25rem;
+  text-decoration: none;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+:global(body.dark) .title {
+  color: #e6e6e6;
+}
+
+:global(body.dark) .card {
+  background: #24242a;
+}
+
+:global(body.dark) .emptyText {
+  color: #e6e6e6;
+}
+
+:global(body.dark) .emptyDesc {
+  color: #9CA3AF;
+}
+
+@media (max-width: 48rem) {
+  .page {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .videoGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

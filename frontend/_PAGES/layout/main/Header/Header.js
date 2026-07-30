@@ -210,16 +210,16 @@ export default function Header() {
                         <ion-icon name="person-outline"></ion-icon>
                         <span>{t('header.myData')}</span>
                       </button>
-                      <button type="button" className={styles.userAction} onClick={() => { setMenuAbierto(false); router.push('/suscripciones/') }}>
-                        <ion-icon name="lock-closed-outline"></ion-icon>
+                      <button type="button" className={styles.userAction} onClick={() => { setMenuAbierto(false); router.push('/ajustes/') }}>
+                        <ion-icon name="settings-outline"></ion-icon>
                         <span>{t('header.settingsConfig')}</span>
                       </button>
-                      <button type="button" className={styles.userAction} onClick={() => { setMenuAbierto(false); router.push('/favoritos/') }}>
-                        <ion-icon name="videocam-outline"></ion-icon>
+                      <button type="button" className={styles.userAction} onClick={() => { setMenuAbierto(false); router.push('/notificaciones/') }}>
+                        <ion-icon name="notifications-outline"></ion-icon>
                         <span>{t('header.notifications')}</span>
                       </button>
-                      <button type="button" className={styles.userAction} onClick={() => { setMenuAbierto(false); router.push('/guardados/') }}>
-                        <ion-icon name="pricetag-outline"></ion-icon>
+                      <button type="button" className={styles.userAction} onClick={() => { setMenuAbierto(false); router.push('/videos-guardados/') }}>
+                        <ion-icon name="bookmark-outline"></ion-icon>
                         <span>{t('header.videosSaved')}</span>
                       </button>
                       <button type="button" className={styles.userAction} onClick={cerrarSesion}>

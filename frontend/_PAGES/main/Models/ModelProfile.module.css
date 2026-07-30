@@ -175,7 +175,6 @@
   font-size: 1.375rem;
   font-weight: 700;
   color: #2B303A;
-  padding-top: 2.5%;
 }
 
 .sectionTitle span {
@@ -191,8 +190,14 @@
   padding: 0.5rem 2rem;
   font-size: 0.75rem;
   font-weight: 500;
-  color: #FF0055;
+  color: #2B303A;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.filterBtn ion-icon {
+  font-size: 0.625rem;
 }
 
 .videoGrid {
@@ -238,6 +243,7 @@
 
 :global(body.dark) .filterBtn {
   background: #24242a;
+  color: #e6e6e6;
 }
 
 :global(body.dark) .socialIcon {
@@ -267,9 +273,6 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .sectionTitle {
-    padding-top: 1.5%;
-  }
 }
 
 @media (max-width: 48rem) {
@@ -292,14 +295,11 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .sectionTitle {
-    padding-top: 1%;
-  }
 }
 
 @media (max-width: 39.938rem) {
   .videoGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .attributes {

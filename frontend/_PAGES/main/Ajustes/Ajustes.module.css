@@ -1,0 +1,188 @@
+.page {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 1.25rem 0.938rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 0.5rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.cardTitle {
+  font-size: 0.688rem;
+  font-weight: 700;
+  color: #FF0055;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.field:last-child {
+  margin-bottom: 0;
+}
+
+.label {
+  font-size: 0.688rem;
+  font-weight: 700;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.select {
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid #D1D5DB;
+  border-radius: 0.375rem;
+  padding: 0 0.75rem;
+  font-size: 0.813rem;
+  color: #374151;
+  background: #fff;
+  outline: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  appearance: auto;
+}
+
+.select:focus {
+  border-color: #FF0055;
+}
+
+.toggleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  gap: 1rem;
+}
+
+.toggleRow + .toggleRow {
+  border-top: 1px solid #F3F4F6;
+}
+
+.toggleInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.toggleLabel {
+  font-size: 0.813rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.toggleDesc {
+  font-size: 0.688rem;
+  color: #6B7280;
+}
+
+.toggle {
+  width: 2.75rem;
+  height: 1.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  background: #D1D5DB;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  transition: background 0.2s;
+  padding: 0;
+}
+
+.toggleOn {
+  background: #FF0055;
+}
+
+.toggleKnob {
+  position: absolute;
+  top: 0.188rem;
+  left: 0.188rem;
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.2s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.toggleOn .toggleKnob {
+  transform: translateX(1.25rem);
+}
+
+:global(body.dark) .title {
+  color: #e6e6e6;
+}
+
+:global(body.dark) .card {
+  background: #24242a;
+}
+
+:global(body.dark) .cardTitle {
+  border-bottom-color: #3a3a45;
+}
+
+:global(body.dark) .label {
+  color: #a6a6b0;
+}
+
+:global(body.dark) .select {
+  background: #16171b;
+  border-color: #3a3a45;
+  color: #e6e6e6;
+}
+
+:global(body.dark) .select:focus {
+  border-color: #FF0055;
+}
+
+:global(body.dark) .toggleLabel {
+  color: #e6e6e6;
+}
+
+:global(body.dark) .toggleDesc {
+  color: #9CA3AF;
+}
+
+:global(body.dark) .toggle {
+  background: #4B5563;
+}
+
+:global(body.dark) .toggleOn {
+  background: #FF0055;
+}
+
+:global(body.dark) .toggleRow + .toggleRow {
+  border-top-color: #3a3a45;
+}
+
+@media (max-width: 48rem) {
+  .page {
+    padding: 0.75rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+}

@@ -9,7 +9,7 @@ export default function ModelsPage({ models, images }) {
         <h1 className={styles.title}>
           <span>Top</span> Rated Models
         </h1>
-        <button type="button" className={styles.filterBtn}>Top Rated &#8743;</button>
+        <button type="button" className={styles.filterBtn}>Top Rated <ion-icon name="chevron-down-outline"></ion-icon></button>
       </div>
 
       <div className={styles.grid}>

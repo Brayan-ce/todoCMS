@@ -4,55 +4,36 @@
   padding: 1.25rem 0.938rem;
 }
 
-.twoCol {
+.layout {
   display: flex;
   gap: 1.25rem;
   align-items: flex-start;
 }
 
-.colLeft {
-  width: 18rem;
+.sidebar {
+  width: 16rem;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 
-.colRight {
-  flex: 1;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.card {
+.userCard {
   background: #fff;
   border-radius: 0.5rem;
-  padding: 1.25rem 1.5rem;
+  padding: 1.25rem 1rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
-}
-
-.cardTitle {
-  font-size: 0.688rem;
-  font-weight: 700;
-  color: #FF0055;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #F3F4F6;
 }
 
 .avatarWrap {
   display: flex;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .avatar {
-  width: 5rem;
-  height: 5rem;
+  width: 4.5rem;
+  height: 4.5rem;
   border-radius: 50%;
   background: #F3F4F6;
   display: flex;
@@ -61,7 +42,7 @@
 }
 
 .avatarIcon {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   color: #9CA3AF;
 }
 
@@ -69,8 +50,8 @@
   text-align: center;
 }
 
-.userDisplayName {
-  font-size: 1rem;
+.userName {
+  font-size: 0.938rem;
   font-weight: 700;
   color: #111827;
   display: block;
@@ -78,10 +59,67 @@
 }
 
 .userEmail {
-  font-size: 0.75rem;
+  font-size: 0.688rem;
   color: #6B7280;
   display: block;
   margin-top: 0.25rem;
+  word-break: break-all;
+}
+
+.nav {
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.navBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: none;
+  background: none;
+  font-size: 0.813rem;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  border-bottom: 1px solid #F3F4F6;
+  text-align: left;
+}
+
+.navBtn:last-child {
+  border-bottom: none;
+}
+
+.navBtn:hover {
+  background: #F9FAFB;
+  color: #FF0055;
+}
+
+.navBtnActive {
+  background: #FFF0F5;
+  color: #FF0055;
+}
+
+.navIcon {
+  font-size: 1.125rem;
+  flex-shrink: 0;
+  color: #9CA3AF;
+}
+
+.navBtn:hover .navIcon,
+.navBtnActive .navIcon {
+  color: #FF0055;
+}
+
+.sidebarBottom {
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
 .optionBtn {
@@ -96,17 +134,12 @@
   font-weight: 600;
   color: #374151;
   cursor: pointer;
-  transition: color 0.15s;
   border-bottom: 1px solid #F3F4F6;
+  transition: color 0.15s;
 }
 
 .optionBtn:last-child {
   border-bottom: none;
-  padding-bottom: 0;
-}
-
-.optionBtn:first-child {
-  padding-top: 0;
 }
 
 .optionBtn:hover {
@@ -125,6 +158,36 @@
 
 .optionBtn:hover .optionIcon {
   color: inherit;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.cardTitle {
+  font-size: 0.688rem;
+  font-weight: 700;
+  color: #FF0055;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #F3F4F6;
 }
 
 .field {
@@ -250,6 +313,114 @@
   color: #059669;
 }
 
+.toggleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  gap: 1rem;
+}
+
+.toggleRow + .toggleRow {
+  border-top: 1px solid #F3F4F6;
+}
+
+.toggleInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.toggleLabel {
+  font-size: 0.813rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.toggleDesc {
+  font-size: 0.688rem;
+  color: #6B7280;
+}
+
+.toggle {
+  width: 2.75rem;
+  height: 1.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  background: #D1D5DB;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  transition: background 0.2s;
+  padding: 0;
+}
+
+.toggleOn {
+  background: #FF0055;
+}
+
+.toggleKnob {
+  position: absolute;
+  top: 0.188rem;
+  left: 0.188rem;
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.2s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.toggleOn .toggleKnob {
+  transform: translateX(1.25rem);
+}
+
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 1rem;
+  min-width: 0;
+}
+
+.emptySaved {
+  text-align: center;
+  padding: 2.5rem 1rem;
+}
+
+.emptyIcon {
+  font-size: 3rem;
+  color: #D1D5DB;
+  margin-bottom: 0.75rem;
+}
+
+.emptyText {
+  font-size: 0.938rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 0.25rem;
+}
+
+.emptyDesc {
+  font-size: 0.75rem;
+  color: #6B7280;
+  margin: 0 0 1.25rem;
+}
+
+.exploreBtn {
+  display: inline-flex;
+  height: 2.5rem;
+  padding: 0 1.5rem;
+  background: #FF0055;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.75rem;
+  border-radius: 1.25rem;
+  text-decoration: none;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
 .confirmOverlay {
   position: fixed;
   inset: 0;
@@ -371,7 +542,11 @@
   justify-content: center;
 }
 
-:global(body.dark) .card {
+:global(body.dark) .userCard,
+:global(body.dark) .nav,
+:global(body.dark) .sidebarBottom,
+:global(body.dark) .card,
+:global(body.dark) .confirmModal {
   background: #24242a;
 }
 
@@ -383,12 +558,36 @@
   background: #16171b;
 }
 
-:global(body.dark) .userDisplayName {
+:global(body.dark) .userName {
   color: #e6e6e6;
 }
 
 :global(body.dark) .userEmail {
   color: #9CA3AF;
+}
+
+:global(body.dark) .navBtn {
+  color: #d1d1d1;
+  border-bottom-color: #3a3a45;
+}
+
+:global(body.dark) .navBtn:hover {
+  background: #1d1b28;
+  color: #FF0055;
+}
+
+:global(body.dark) .navBtnActive {
+  background: #2a1520;
+  color: #FF0055;
+}
+
+:global(body.dark) .navIcon {
+  color: #6B7280;
+}
+
+:global(body.dark) .navBtn:hover .navIcon,
+:global(body.dark) .navBtnActive .navIcon {
+  color: #FF0055;
 }
 
 :global(body.dark) .optionBtn {
@@ -446,8 +645,24 @@
   color: #6EE7B7;
 }
 
-:global(body.dark) .confirmModal {
-  background: #24242a;
+:global(body.dark) .toggleRow + .toggleRow {
+  border-top-color: #3a3a45;
+}
+
+:global(body.dark) .toggleLabel {
+  color: #e6e6e6;
+}
+
+:global(body.dark) .toggleDesc {
+  color: #9CA3AF;
+}
+
+:global(body.dark) .toggle {
+  background: #4B5563;
+}
+
+:global(body.dark) .toggleOn {
+  background: #FF0055;
 }
 
 :global(body.dark) .confirmTitle {
@@ -467,20 +682,16 @@
   color: #e6e6e6;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .page {
-    padding: 0.75rem 0.75rem;
+    padding: 0.75rem;
   }
 
-  .twoCol {
+  .layout {
     flex-direction: column;
   }
 
-  .colLeft {
-    width: 100%;
-  }
-
-  .colRight {
+  .sidebar {
     width: 100%;
   }
 
@@ -495,5 +706,11 @@
 
   .submitRow {
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 30rem) {
+  .videoGrid {
+    grid-template-columns: 1fr 1fr;
   }
 }
