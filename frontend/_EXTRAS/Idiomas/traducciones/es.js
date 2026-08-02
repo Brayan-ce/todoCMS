@@ -146,7 +146,7 @@ const es = {
       latestUpdates: { lead: "Últimas", rest: "Actualizaciones" },
       topRatedVideos: { lead: "Los Más", rest: "Valorados" },
       mostViewed: { lead: "Más", rest: "Vistos" },
-      categories: { lead: "Categorías", rest: "Videos" },
+      categories: { lead: "Mejor", rest: "Valoradas Categorías Pornográficas" },
       tags: { lead: "Etiquetas", rest: "Videos" },
       tagged: { lead: "Los Más", rest: "Valorados Etiquetados con" },
     },

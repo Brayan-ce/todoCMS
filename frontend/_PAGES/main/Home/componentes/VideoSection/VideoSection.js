@@ -53,7 +53,7 @@ export default function VideoSection({
       <div className={styles.container}>
         <div className={styles.blockThumbs}>
           <div className={styles.headline}>
-            <TitleTag className={styles.title}>
+            <TitleTag className={`${styles.title}${pageType === 'categories' ? ' ' + styles.titlePlain : ''}`}>
               {pageType === 'tagged' ? (
                 <><span>{displayLead}</span> {displayRest} {dynamicSuffix}</>
               ) : (
@@ -65,11 +65,14 @@ export default function VideoSection({
           </div>
 
           <div className={styles.thumbs}>
-            {videos.map((video) => (
+            {videos.map((video, i) => (
               <VideoCard
                 key={video.id}
                 video={video}
                 imageSrc={images[video.imageIndex % images.length]}
+                quick={pageType === 'categories'}
+                first={i === 0}
+                tags={pageType === 'tags'}
               />
             ))}
           </div>

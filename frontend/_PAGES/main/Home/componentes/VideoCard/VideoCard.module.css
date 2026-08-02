@@ -223,3 +223,156 @@
 :global(body.dark) .thumbImg {
   background: #24242a;
 }
+
+.quick .description,
+.quickFirst .description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.625rem;
+  -webkit-line-clamp: initial;
+  min-height: auto;
+}
+
+.quick .name,
+.quickFirst .name {
+  color: #2B303A;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.quick .info,
+.quickFirst .info {
+  color: #6B7280;
+  font-weight: 600;
+  font-size: 0.813rem;
+  margin-top: 0;
+  flex-shrink: 0;
+  margin-left: 0.313rem;
+}
+
+.quick .infoItem,
+.quickFirst .infoItem {
+  margin-right: 0;
+}
+
+.quick .svgIcon,
+.quickFirst .svgIcon {
+  width: 0.875rem;
+  height: 0.75rem;
+  margin-right: 0.313rem;
+  color: #000000;
+  margin-bottom: 0.125rem;
+}
+
+.quick .rating,
+.quickFirst .rating {
+  display: none;
+}
+
+:global(body.dark) .quick .name,
+:global(body.dark) .quickFirst .name {
+  color: #e6e6e6;
+}
+
+:global(body.dark) .quick .info,
+:global(body.dark) .quickFirst .info {
+  color: #9CA3AF;
+}
+
+:global(body.dark) .quick .svgIcon,
+:global(body.dark) .quickFirst .svgIcon {
+  color: #9CA3AF;
+}
+
+.tags .description {
+  min-height: auto;
+  -webkit-line-clamp: 1;
+}
+
+.tags .name {
+  font-size: 0.938rem;
+  font-weight: 400;
+  color: #000000;
+}
+
+.tags .item:hover .name {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.tags .info {
+  color: #1F2937;
+  font-size: 0.813rem;
+  font-weight: 600;
+  margin-top: 0.125rem;
+}
+
+.tags .infoItem {
+  margin-right: 0.875rem;
+}
+
+.tags .svgIcon {
+  width: 0.875rem;
+  height: 0.625rem;
+  margin-right: 0.313rem;
+  color: #000000;
+}
+
+.tags .voters {
+  color: #000000;
+}
+
+.tags .voters .svgIcon {
+  width: 0.75rem;
+  height: 0.75rem;
+  color: #22C55E;
+}
+
+.tags .timeAgo {
+  display: flex;
+  align-items: center;
+  gap: 0.313rem;
+  margin-left: auto;
+  color: #000000;
+  font-size: 0.813rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.tags .calendarIcon {
+  color: #000000;
+  flex-shrink: 0;
+}
+
+:global(body.dark) .tags .name {
+  color: #e6e6e6;
+}
+
+:global(body.dark) .tags .item:hover .name {
+  color: #e6e6e6;
+}
+
+:global(body.dark) .tags .info {
+  color: #9CA3AF;
+}
+
+:global(body.dark) .tags .svgIcon {
+  color: #9CA3AF;
+}
+
+:global(body.dark) .tags .voters {
+  color: #e6e6e6;
+}
+
+:global(body.dark) .tags .timeAgo {
+  color: #e6e6e6;
+}
+
+:global(body.dark) .tags .calendarIcon {
+  color: #9CA3AF;
+}

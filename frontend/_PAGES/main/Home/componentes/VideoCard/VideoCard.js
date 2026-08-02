@@ -11,10 +11,36 @@ function formatViews(views, lang) {
   return new Intl.NumberFormat(locale).format(views)
 }
 
-export default function VideoCard({ video, imageSrc, className }) {
+function formatTimeAgo(date, lang) {
+  const diff = Date.now() - date
+  const years = Math.floor(diff / 31536000000)
+  const months = Math.floor(diff / 2628000000)
+  const days = Math.floor(diff / 86400000)
+  const hours = Math.floor(diff / 3600000)
+  if (lang === 'es') {
+    if (years > 0) return `${years} año${years > 1 ? 's' : ''}`
+    if (months > 0) return `${months} mes${months > 1 ? 'es' : ''}`
+    if (days > 0) return `${days} día${days > 1 ? 's' : ''}`
+    if (hours > 0) return `${hours} hora${hours > 1 ? 's' : ''}`
+    return 'ahora'
+  }
+  if (years > 0) return `${years} year${years > 1 ? 's' : ''}`
+  if (months > 0) return `${months} month${months > 1 ? 's' : ''}`
+  if (days > 0) return `${days} day${days > 1 ? 's' : ''}`
+  if (hours > 0) return `${hours} hour${hours > 1 ? 's' : ''}`
+  return 'now'
+}
+
+export default function VideoCard({ video, imageSrc, className, quick, first, tags }) {
   const { lang } = useIdioma()
+  const quickClass = quick
+    ? first
+      ? ` ${styles.quickFirst}`
+      : ` ${styles.quick}`
+    : ''
+  const tagsClass = tags ? ` ${styles.tags}` : ''
   return (
-    <div className={`${styles.thumb}${className ? ' ' + className : ''}`}>
+    <div className={`${styles.thumb}${className ? ' ' + className : ''}${quickClass}${tagsClass}`}>
       <div className={styles.box}>
         <Link className={styles.item} href={video.href} title={video.title}>
           <span className={styles.thumbImg}>
@@ -41,6 +67,16 @@ export default function VideoCard({ video, imageSrc, className }) {
                 <span>{video.rating}%</span>
               </span>
             </span>
+            {tags && (
+              <span className={styles.timeAgo}>
+                <svg className={styles.calendarIcon} width="13" height="13" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="1" y="2" width="14" height="13" rx="1" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                  <path d="M1 5.5H15" stroke="currentColor" strokeWidth="1.5" />
+                  <path d="M5 0.5V3.5M11 0.5V3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                </svg>
+                {formatTimeAgo(video.date, lang)}
+              </span>
+            )}
           </span>
         </Link>
       </div>

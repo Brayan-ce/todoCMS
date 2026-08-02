@@ -146,7 +146,7 @@ const en = {
       latestUpdates: { lead: "Latest Updates", rest: "Videos" },
       topRatedVideos: { lead: "Top", rest: "Rated Videos" },
       mostViewed: { lead: "Most Viewed", rest: "Videos" },
-      categories: { lead: "Categories", rest: "Videos" },
+      categories: { lead: "Top", rest: "Rated Porn Categories" },
       tags: { lead: "Tags", rest: "Videos" },
       tagged: { lead: "Top", rest: "Rated Videos Tagged with" },
     },

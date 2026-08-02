@@ -4,45 +4,84 @@
 }
 
 .thumb {
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
   aspect-ratio: 3 / 4;
-  border-radius: 0.25rem;
+  border-radius: 0.375rem;
   overflow: hidden;
   background: #000;
 }
 
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: 0.25rem 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
 .name {
   display: block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #2B303A;
-  margin-top: 0.5rem;
+  width: 100%;
   overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
-  text-align: center;
+  text-overflow: ellipsis;
+  font-size: 0.938rem;
+  font-weight: 600;
+  color: #000000;
+  text-align: left;
 }
 
 .card:hover .name {
-  color: #FF0055;
+  color: #000000;
+  text-decoration: underline;
 }
 
 .meta {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.688rem;
-  color: #6B7280;
-  margin-top: 0.25rem;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  margin-top: 0.125rem;
+}
+
+.metaLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.metric {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.813rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.metaLeft .metric:last-child {
+  margin-left: 0;
+}
+
+.camcorderIcon,
+.imageIcon {
+  color: #000000;
+  flex-shrink: 0;
+}
+
+.thumbsIcon {
+  color: #22C55E;
+  flex-shrink: 0;
 }
 
 .rating {
-  color: #10B981;
-  font-weight: 700;
+  color: #000000;
+}
+
+:global(body.dark) .body {
+  background-color: #24242a;
 }
 
 :global(body.dark) .name {
@@ -50,5 +89,15 @@
 }
 
 :global(body.dark) .card:hover .name {
-  color: #FF0055;
+  color: #e6e6e6;
+}
+
+:global(body.dark) .metric,
+:global(body.dark) .rating {
+  color: #9CA3AF;
+}
+
+:global(body.dark) .camcorderIcon,
+:global(body.dark) .imageIcon {
+  color: #9CA3AF;
 }

@@ -36,6 +36,12 @@
   padding-bottom: 0.25rem;
 }
 
+.title.titlePlain span {
+  color: #2B303A;
+  border-bottom: 0.25rem solid #FF0055;
+  padding-bottom: 0.25rem;
+}
+
 .isHd {
   display: none;
   font-size: 0.688rem;
@@ -116,5 +122,10 @@
 
 :global(body.dark) .title span {
   color: #FF0055;
+  border-color: #FF0055;
+}
+
+:global(body.dark) .title.titlePlain span {
+  color: #e6e6e6;
   border-color: #FF0055;
 }

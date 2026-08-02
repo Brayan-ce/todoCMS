@@ -31,6 +31,7 @@ function buildExactVideos(list, seed) {
     views: v.views,
     rating: v.rating,
     hd: v.hd,
+    date: Date.now() - ((i * 41) % 720) * 86400000 - ((i * 7) % 24) * 3600000,
   }))
 }
 
@@ -78,6 +79,7 @@ function buildVideos(start, count, seed) {
       views: ((i * 173 + 529) % 90 + 10) * 1000 + i * 37,
       rating: ((i * 31 + 17) % 25) + 72,
       hd: i % 3 !== 0,
+      date: Date.now() - ((i * 53) % 720) * 86400000 - ((i * 11) % 24) * 3600000,
     }
   })
 }

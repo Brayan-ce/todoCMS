@@ -41,6 +41,15 @@
   font-size: 0.813rem;
   color: #6B7280;
   font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.313rem;
+}
+
+.countIcon {
+  flex-shrink: 0;
+  fill: #000000;
+  margin-bottom: 0.125rem;
 }
 
 .allBtn {
@@ -64,6 +73,14 @@
 
 :global(body.dark) .name {
   color: #e6e6e6;
+}
+
+:global(body.dark) .count {
+  color: #9CA3AF;
+}
+
+:global(body.dark) .countIcon {
+  fill: #9CA3AF;
 }
 
 :global(body.dark) .allBtn {
