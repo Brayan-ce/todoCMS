@@ -53,31 +53,50 @@ export default function VideoCard({ video, imageSrc, className, quick, first, ta
               <Icon name="play" className={styles.playIcon} />
             </span>
           </span>
-          <span className={styles.description}>
-            <b className={styles.name}>{video.title}</b>
-          </span>
-          <span className={styles.info}>
-            <span className={styles.infoItem}>
-              <Icon name="view" className={`${styles.svgIcon} ${styles.view}`} />
-              <span>{formatViews(video.views, lang)}</span>
-            </span>
-            <span className={styles.rating}>
-              <span className={styles.voters}>
-                <Icon name="like" className={styles.svgIcon} />
-                <span>{video.rating}%</span>
+          {quick ? (
+            <span className={styles.description}>
+              <b className={styles.name}>{video.title}</b>
+              <span className={styles.info}>
+                <span className={styles.infoItem}>
+                  <svg className={`${styles.svgIcon} ${styles.view}`} width="14" height="12" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <circle cx="5" cy="3" r="2" fill="currentColor" />
+                    <circle cx="9" cy="3" r="2" fill="currentColor" />
+                    <rect x="2" y="5" width="9" height="7" rx="1" fill="currentColor" />
+                    <path d="M11 7.5L15 5.5V11.5L11 9.5V7.5Z" fill="currentColor" />
+                  </svg>
+                  {formatViews(video.views, lang)}
+                </span>
               </span>
             </span>
-            {tags && (
-              <span className={styles.timeAgo}>
-                <svg className={styles.calendarIcon} width="13" height="13" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <rect x="1" y="2" width="14" height="13" rx="1" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                  <path d="M1 5.5H15" stroke="currentColor" strokeWidth="1.5" />
-                  <path d="M5 0.5V3.5M11 0.5V3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                </svg>
-                {formatTimeAgo(video.date, lang)}
+          ) : (
+            <>
+              <span className={styles.description}>
+                <b className={styles.name}>{video.title}</b>
               </span>
-            )}
-          </span>
+              <span className={styles.info}>
+                <span className={styles.infoItem}>
+                  <Icon name="view" className={`${styles.svgIcon} ${styles.view}`} />
+                  <span>{formatViews(video.views, lang)}</span>
+                </span>
+                <span className={styles.rating}>
+                  <span className={styles.voters}>
+                    <Icon name="like" className={styles.svgIcon} />
+                    <span>{video.rating}%</span>
+                  </span>
+                </span>
+                {tags && (
+                  <span className={styles.timeAgo}>
+                    <svg className={styles.calendarIcon} width="13" height="13" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect x="1" y="2" width="14" height="13" rx="1" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                      <path d="M1 5.5H15" stroke="currentColor" strokeWidth="1.5" />
+                      <path d="M5 0.5V3.5M11 0.5V3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                    </svg>
+                    {formatTimeAgo(video.date, lang)}
+                  </span>
+                )}
+              </span>
+            </>
+          )}
         </Link>
       </div>
     </div>
