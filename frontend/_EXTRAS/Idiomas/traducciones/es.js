@@ -137,6 +137,12 @@ const es = {
       topRated: "Mejor Valorados",
       mostFavourited: "Más Favoritos",
       mostViewed: "Más Vistos",
+      alphabetically: "Alfabéticamente",
+      mostVideos: "Más Videos",
+    },
+    tagFilter: {
+      videos: "Videos",
+      albums: "Álbumes",
     },
     categories: {
       lead: "Categorías",

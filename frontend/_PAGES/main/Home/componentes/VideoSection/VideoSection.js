@@ -61,7 +61,19 @@ export default function VideoSection({
               )}
               <span className={styles.isHd}>HD</span>
             </TitleTag>
-            {displaySortLabel && <Dropdown label={displaySortLabel} className={styles.sort} />}
+            {pageType === 'tags' ? (
+              <Dropdown
+                label={t('home.tagFilter.videos')}
+                className={styles.sort}
+                filter
+                selectedKey="videos"
+                optionKeys={['videos', 'albums']}
+                labelPrefix="home.tagFilter"
+                optionIcons={{ videos: 'camcorder' }}
+              />
+            ) : (
+              displaySortLabel && <Dropdown label={displaySortLabel} className={styles.sort} filter />
+            )}
           </div>
 
           <div className={styles.thumbs}>

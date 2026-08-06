@@ -64,10 +64,11 @@
 }
 
 .center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(37.5rem, calc(100% - 48rem));
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  padding: 0 1.5rem;
 }
 
 .formSearch {
@@ -546,7 +547,7 @@
 
 @media (max-width: 64rem) {
   .center {
-    width: calc(100% - 48rem);
+    padding: 0 1rem;
   }
 
   .right {
