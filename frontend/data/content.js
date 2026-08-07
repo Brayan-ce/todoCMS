@@ -296,33 +296,7 @@ export const albumsDropdownItems = [
   { label: 'Most Viewed', href: '/albums/most-viewed/' },
 ]
 
-export const azTagsIndex = [
-  { letter: '#', tags: [{ name: '18+', count: 2 }, { name: '4K', count: 4567 }] },
-  { letter: 'B', tags: [{ name: 'Big Ass', count: 12345 }, { name: 'Big Dick', count: 9841 }, { name: 'Big Tits', count: 14567 }, { name: 'Blowjob', count: 18901 }] },
-  { letter: 'G', tags: [{ name: 'Gangbang', count: 5432 }, { name: 'Group Sex', count: 914 }] },
-  { letter: 'M', tags: [{ name: 'Mature', count: 8876 }, { name: 'Milf', count: 16543 }] },
-  { letter: 'S', tags: [{ name: 'Selfshot', count: 2314 }, { name: 'Small Tits', count: 6789 }, { name: 'Squirting', count: 3122 }] },
-  { letter: '#', special: true, tags: [{ name: '粉色Porn', count: 77 }, { name: '素人', count: 1 }] },
-  { letter: 'A', tags: [{ name: 'Amateur', count: 12450 }, { name: 'Anal', count: 16789 }, { name: 'Asian', count: 9456 }, { name: 'Ass', count: 9987 }] },
-  { letter: 'F', tags: [{ name: 'Facesitting', count: 1456 }, { name: 'Fetish', count: 11234 }, { name: 'Fisting', count: 987 }] },
-  { letter: 'O', tags: [{ name: 'Oral', count: 14321 }] },
-  { letter: 'T', tags: [{ name: 'Teen', count: 18765 }, { name: 'Threesome', count: 4455 }] },
-  { letter: 'C', tags: [{ name: 'Creampie', count: 6789 }, { name: 'Cuckold', count: 2345 }] },
-  { letter: 'H', tags: [{ name: 'Hardcore', count: 15678 }, { name: 'Hentai', count: 7890 }] },
-  { letter: 'P', tags: [{ name: 'Porn', count: 21098 }] },
-  { letter: 'U', tags: [{ name: 'Uniform', count: 1234 }] },
-  { letter: 'D', tags: [{ name: 'Dp', count: 2345 }, { name: 'Double Penetration', count: 3456 }] },
-  { letter: 'L', tags: [{ name: 'Latin', count: 7654 }, { name: 'Lesbian', count: 13210 }] },
-  { letter: 'R', tags: [{ name: 'Red Head', count: 3456 }, { name: 'Russian', count: 8912 }] },
-  { letter: 'V', tags: [{ name: 'Vintage', count: 2345 }] },
-  { letter: 'E', tags: [{ name: 'Ebony', count: 6543 }] },
-  { letter: 'J', tags: [{ name: 'Japanese', count: 7130 }] },
-  { letter: 'W', tags: [{ name: 'Webcam', count: 7621 }] },
-  { letter: 'X', tags: [{ name: 'Xxx', count: 15230 }] },
-  { letter: 'N', tags: [{ name: 'Nipples', count: 1234 }, { name: 'Nurse', count: 678 }] },
-  { letter: 'K', tags: [{ name: 'Kissing', count: 2345 }] },
-  { letter: 'Y', tags: [{ name: 'Young', count: 4567 }] },
-]
+export const azTagsIndex = []
 
 export const modelsDropdownItems = [
   { name: 'Lana Rhoades', videos: 24, photos: 156, imageIndex: 0 },

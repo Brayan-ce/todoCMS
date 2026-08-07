@@ -53,7 +53,7 @@ export default function VideoSection({
       <div className={styles.container}>
         <div className={styles.blockThumbs}>
           <div className={styles.headline}>
-            <TitleTag className={`${styles.title}${pageType === 'categories' ? ' ' + styles.titlePlain : ''}`}>
+            <TitleTag className={`${styles.title}${pageType === 'categories' || pageType === 'tags' ? ' ' + styles.titlePlain : ''}`}>
               {pageType === 'tagged' ? (
                 <><span>{displayLead}</span> {displayRest} {dynamicSuffix}</>
               ) : (
@@ -61,18 +61,15 @@ export default function VideoSection({
               )}
               <span className={styles.isHd}>HD</span>
             </TitleTag>
-            {pageType === 'tags' ? (
+            {displaySortLabel && (
               <Dropdown
-                label={t('home.tagFilter.videos')}
+                label={displaySortLabel}
                 className={styles.sort}
                 filter
-                selectedKey="videos"
-                optionKeys={['videos', 'albums']}
-                labelPrefix="home.tagFilter"
-                optionIcons={{ videos: 'camcorder' }}
+                selectedKey="topRated"
+                optionKeys={['alphabetically', 'mostViewed', 'mostVideos']}
+                labelPrefix="home.sortLabels"
               />
-            ) : (
-              displaySortLabel && <Dropdown label={displaySortLabel} className={styles.sort} filter />
             )}
           </div>
 
@@ -82,9 +79,8 @@ export default function VideoSection({
                 key={video.id}
                 video={video}
                 imageSrc={images[video.imageIndex % images.length]}
-                quick={pageType === 'categories'}
+                quick={pageType === 'categories' || pageType === 'tags'}
                 first={i === 0}
-                tags={pageType === 'tags'}
               />
             ))}
           </div>
