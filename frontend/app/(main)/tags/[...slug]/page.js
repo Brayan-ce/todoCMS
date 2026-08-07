@@ -8,6 +8,6 @@ export default async function Page({ params }) {
   const title = name.charAt(0).toUpperCase() + name.slice(1)
   const allVideos = [...videoSections[0].videos, ...videoSections[1].videos, ...videoSections[2].videos]
   const videos = allVideos.slice(0, 35)
-  const section = { ...videoSections[0], videos, pageType: 'tagged', dynamicSuffix: title.toLowerCase(), sortLabel: 'Top Rated', as: 'h1' }
+  const section = { ...videoSections[0], videos, pageType: 'tagged', dynamicSuffix: title.toLowerCase(), sortLabel: 'Top Rated', filterPage: true, as: 'h1' }
   return <Home videoSections={[section]} categorySection={null} bottomTags={null} images={images} />
 }

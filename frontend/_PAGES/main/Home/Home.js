@@ -19,6 +19,7 @@ export default function Home({ videoSections, categorySection, bottomTags, image
           showPagination
           pageType={section.pageType}
           dynamicSuffix={section.dynamicSuffix}
+          filterPage={section.filterPage}
         />
       ))}
 

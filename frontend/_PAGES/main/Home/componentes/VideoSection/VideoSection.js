@@ -24,6 +24,7 @@ export default function VideoSection({
   showPagination = true,
   pageType,
   dynamicSuffix,
+  filterPage = false,
 }) {
   const { t } = useIdioma()
 
@@ -53,7 +54,7 @@ export default function VideoSection({
       <div className={styles.container}>
         <div className={styles.blockThumbs}>
           <div className={styles.headline}>
-            <TitleTag className={`${styles.title}${pageType === 'categories' || pageType === 'tags' ? ' ' + styles.titlePlain : ''}`}>
+            <TitleTag className={`${styles.title}${pageType === 'categories' || pageType === 'tags' || filterPage ? ' ' + styles.titlePlain : ''}`}>
               {pageType === 'tagged' ? (
                 <><span>{displayLead}</span> {displayRest} {dynamicSuffix}</>
               ) : (
@@ -79,7 +80,7 @@ export default function VideoSection({
                 key={video.id}
                 video={video}
                 imageSrc={images[video.imageIndex % images.length]}
-                quick={pageType === 'categories' || pageType === 'tags'}
+                quick={pageType === 'categories' || pageType === 'tags' || filterPage}
                 first={i === 0}
               />
             ))}
