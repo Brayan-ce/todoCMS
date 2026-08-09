@@ -85,6 +85,12 @@
   color: #6B7280;
 }
 
+@media (max-width: 48rem) {
+  .meta {
+    margin-top: 0.175rem;
+  }
+}
+
 :global(body.dark) .title {
   color: #e6e6e6;
 }

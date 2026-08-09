@@ -34,7 +34,7 @@ export default function Footer({ isHome }) {
             const colKey = `footer.col${colIndex}`
             const hasAccent = !!col.accent
             return (
-              <div key={colIndex} className={styles.col}>
+              <div key={colIndex} className={`${styles.col} ${!col.mobile ? styles.mobileHidden : ''}`}>
                 <h3 className={styles.title}>
                   {hasAccent ? (
                     <>

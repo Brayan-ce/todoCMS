@@ -139,6 +139,9 @@ const en = {
       mostViewed: "Most Viewed",
       alphabetically: "Alphabetically",
       mostVideos: "Most Videos",
+      heterosexual: "Heterosexual",
+      gay: "Gay",
+      transsexual: "Transsexual",
     },
     tagFilter: {
       videos: "Videos",
@@ -166,6 +169,9 @@ const en = {
   sidebar: {
     sortBy: "Sort by",
     videoQuality: "Video Quality",
+    videoType: "Video Type",
+    freeVideos: "Free videos",
+    premiumVideos: "Premium videos",
     all: "All",
     hd: "HD",
     popularTags: "Popular Tags",

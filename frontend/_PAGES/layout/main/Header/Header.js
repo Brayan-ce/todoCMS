@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Icon from '@/_EXTRAS/Icons/Icons'
@@ -22,6 +22,14 @@ export default function Header() {
   const [orientAbierto, setOrientAbierto] = useState(false)
   const [langAbierto, setLangAbierto] = useState(false)
   const [orientacion, setOrientacion] = useState('hetero')
+  const [busquedaAbierta, setBusquedaAbierta] = useState(false)
+  const busquedaRef = useRef(null)
+
+  useEffect(() => {
+    if (busquedaAbierta && busquedaRef.current) {
+      busquedaRef.current.focus()
+    }
+  }, [busquedaAbierta])
 
   const orientaciones = [
     { value: 'hetero', label: t('orientacion.hetero') },
@@ -119,7 +127,7 @@ export default function Header() {
 
         <div className={styles.right}>
           <Link href="/upload/" className={styles.uploadBtn} aria-label="Upload">
-            <ion-icon name="cloud-upload-outline" className={styles.uploadIcon}></ion-icon>
+            <ion-icon name="cloud-upload" className={styles.uploadIcon}></ion-icon>
           </Link>
           <button
             type="button"
@@ -127,7 +135,26 @@ export default function Header() {
             aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}
             onClick={toggleDark}
           >
-            <ion-icon name={dark ? 'sunny-outline' : 'moon-outline'} className={styles.themeIcon}></ion-icon>
+            <ion-icon name={dark ? 'sunny' : 'moon'} className={styles.themeIcon}></ion-icon>
+          </button>
+
+          <button
+            type="button"
+            className={styles.mobileSearchBtn}
+            aria-label={busquedaAbierta ? 'Close search' : 'Open search'}
+            aria-expanded={busquedaAbierta}
+            onClick={() => setBusquedaAbierta(!busquedaAbierta)}
+          >
+            {busquedaAbierta ? (
+              <svg className={styles.mobileSearchClose} width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M5 5l14 14M19 5L5 19" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" />
+              </svg>
+            ) : (
+              <svg className={styles.mobileSearchIcon} width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" strokeWidth="3.5" />
+                <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" />
+              </svg>
+            )}
           </button>
 
           {/* language btn - hidden for now
@@ -240,6 +267,23 @@ export default function Header() {
           )}
         </div>
       </header>
+
+      <div className={`${styles.mobileSearchBar} ${busquedaAbierta ? styles.mobileSearchBarOpen : ''}`}>
+        <div className={styles.mobileSearchBox}>
+          <input
+            ref={busquedaRef}
+            type="text"
+            className={styles.mobileSearchInput}
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <svg className={styles.mobileSearchBoxIcon} width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" strokeWidth="3.5" />
+            <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" />
+          </svg>
+        </div>
+        <span className={styles.mobileSearchLine} />
+      </div>
 
       <div className={styles.headerBottom}>
         <div className={styles.navContainer}>

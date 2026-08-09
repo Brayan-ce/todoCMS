@@ -209,6 +209,7 @@ export const footerSpot = {
 export const footerColumns = [
   {
     title: 'Information',
+    mobile: true,
     links: [
       { label: 'Terms & Conditions', href: '/terms/' },
       { label: 'Privacy Policy', href: '/privacy-policy/' },
@@ -231,6 +232,7 @@ export const footerColumns = [
     title: 'Support and Help',
     accent: 'Support',
     rest: 'and Help',
+    mobile: true,
     links: [
       { label: 'Contact Support', href: '/contact/', external: true },
       { label: 'Sitemap', href: '/sitemap/' },

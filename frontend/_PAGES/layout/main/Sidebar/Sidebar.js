@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useIdioma } from '@/_EXTRAS/Idiomas/IdiomasContext'
 import { useShell } from '@/_EXTRAS/Shell/ShellContext'
@@ -15,6 +16,17 @@ export default function Sidebar({
 }) {
   const { t, lang, setLang, IDIOMAS } = useIdioma()
   const { dark, toggleDark, sidebarOpen, closeSidebar } = useShell()
+  const [videoType, setVideoType] = useState('free')
+
+  useEffect(() => {
+    if (sidebarOpen) {
+      const previous = document.body.style.overflow
+      document.body.style.overflow = 'hidden'
+      return () => {
+        document.body.style.overflow = previous
+      }
+    }
+  }, [sidebarOpen])
 
   return (
     <aside
@@ -54,7 +66,27 @@ export default function Sidebar({
 
         <div className={styles.box}>
           <h3 className={styles.title}>{t('sidebar.sortBy')}</h3>
-          <Dropdown label="Videos" />
+          <Dropdown
+            label="Videos"
+            selectedKey="topRated"
+            optionKeys={['topRated', 'alphabetically', 'mostViewed', 'mostVideos', 'heterosexual', 'gay', 'transsexual']}
+          />
+        </div>
+
+        <div className={styles.box}>
+          <h3 className={styles.title}>{t('sidebar.videoType')}</h3>
+          <ul className={`${styles.tagsList} ${styles.listHd}`}>
+            <li className={styles.item}>
+              <Tag asButton active={videoType === 'free'} onClick={() => setVideoType('free')}>
+                {t('sidebar.freeVideos')}
+              </Tag>
+            </li>
+            <li className={styles.item}>
+              <Tag asButton active={videoType === 'premium'} onClick={() => setVideoType('premium')}>
+                {t('sidebar.premiumVideos')}
+              </Tag>
+            </li>
+          </ul>
         </div>
 
         <div className={styles.box}>

@@ -182,8 +182,20 @@
     padding: 0 0.625rem;
   }
 
+  .sectionSpot {
+    display: none;
+  }
+
   .footerWrap {
     margin: 0;
+  }
+
+  .second {
+    display: none;
+  }
+
+  .mobileHidden {
+    display: none;
   }
 
   .col {

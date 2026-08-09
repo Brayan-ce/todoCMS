@@ -9,12 +9,13 @@ export default function Tag({
   asButton = false,
   className = '',
   title,
+  onClick,
 }) {
   const cls = `${styles.tag} ${active ? styles.active : ''} ${value != null ? styles.withValue : ''} ${className}`
 
   if (asButton) {
     return (
-      <button type="button" className={cls}>
+      <button type="button" className={cls} onClick={onClick}>
         <span className={styles.name}>{children}</span>
       </button>
     )

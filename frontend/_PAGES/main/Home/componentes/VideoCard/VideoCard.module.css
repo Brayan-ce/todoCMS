@@ -180,6 +180,9 @@
 }
 
 @media (max-width: 48rem) {
+  .info {
+    margin-top: 0.219rem;
+  }
 }
 
 @media (max-width: 26.563rem) {
