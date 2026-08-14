@@ -96,7 +96,7 @@
   transition: color 0.3s;
   line-height: 1.3;
   margin-top: 0.625rem;
-  min-height: 2.25rem;
+  min-height: 1.3rem;
 }
 
 .name {
@@ -192,7 +192,7 @@
 
   .description {
     font-size: 0.688rem;
-    min-height: 1.8rem;
+    min-height: 0.9rem;
     -webkit-line-clamp: 1;
   }
 

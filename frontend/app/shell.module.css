@@ -79,6 +79,13 @@
 }
 
 @media (min-width: 48.063rem) {
+  .sidebarWrap {
+    position: fixed;
+    top: 72px;
+    bottom: 0;
+    height: calc(100vh - 72px);
+  }
+
   .backdrop {
     display: none;
   }

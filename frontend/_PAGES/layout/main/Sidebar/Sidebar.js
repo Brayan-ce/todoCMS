@@ -6,7 +6,6 @@ import { useIdioma } from '@/_EXTRAS/Idiomas/IdiomasContext'
 import { useShell } from '@/_EXTRAS/Shell/ShellContext'
 import Dropdown from '@/_PAGES/main/Home/componentes/Dropdown/Dropdown'
 import Tag from '@/_PAGES/main/Home/componentes/Tag/Tag'
-import Logo from '@/_EXTRAS/Logo/Logo'
 import styles from './Sidebar.module.css'
 
 export default function Sidebar({
@@ -19,12 +18,12 @@ export default function Sidebar({
   const [videoType, setVideoType] = useState('free')
 
   useEffect(() => {
-    if (sidebarOpen) {
-      const previous = document.body.style.overflow
-      document.body.style.overflow = 'hidden'
-      return () => {
-        document.body.style.overflow = previous
-      }
+    if (!sidebarOpen) return
+    if (window.matchMedia('(min-width: 48.063rem)').matches) return
+    const previous = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = previous
     }
   }, [sidebarOpen])
 
@@ -35,10 +34,6 @@ export default function Sidebar({
       aria-label="Filters"
     >
       <div className={styles.sidebarInner}>
-        <Link href="/" className={styles.logoMobile} aria-label="WhoresHub home" suppressHydrationWarning onClick={closeSidebar}>
-          <Logo />
-        </Link>
-
         <div className={styles.mobileActions}>
           <button type="button" className={styles.mobileActionBtn} onClick={() => ir('/upload/')}>
             <ion-icon name="cloud-upload-outline"></ion-icon>

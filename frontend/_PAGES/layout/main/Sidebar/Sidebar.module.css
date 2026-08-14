@@ -16,13 +16,6 @@
   gap: 1.25rem;
 }
 
-.logoMobile {
-  display: none;
-  margin-bottom: 0;
-  width: 11.25rem;
-  height: 3rem;
-}
-
 .mobileActions {
   display: none;
   flex-direction: column;
@@ -160,10 +153,6 @@
     padding-top: 0;
     height: 100%;
     min-height: 0;
-  }
-
-  .logoMobile {
-    display: inline-block;
   }
 
   .mobileActions {
