@@ -150,13 +150,26 @@
 @media (max-width: 48rem) {
   .sidebar {
     border-radius: 0;
-    padding-top: 0;
+    padding-top: 0.938rem;
     height: 100%;
     min-height: 0;
   }
 
   .mobileActions {
     display: flex;
+  }
+
+  .listHd {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .listHd .item {
+    margin: 0 0 0.625rem;
+  }
+
+  .listHd .item:last-child {
+    margin-bottom: 0;
   }
 }
 
